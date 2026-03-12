@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Mid Marks Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1557682264-96756fa9a836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 700px;
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      color: #fff;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .subject-block {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .subject-block h3 {
+      margin-top: 0;
+      color: #f8f8f8;
+    }
+
+    input[type="submit"] {
+      margin-top: 30px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(135deg, #5a7edc, #9266d1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-card">
+    <h2>Student Midterm Marks Entry</h2>
+    <form action="submit.php" method="post">
+      <label for="name">Student Name:</label>
+      <input type="text" name="name" placeholder="Enter your name" required>
+
+      <label for="id">Roll No (ID):</label>
+      <input type="number" name="id" placeholder="Enter roll number" required>
+
+      <!-- 5 Subjects -->
+      <div class="subject-block">
+        <h3>Subject 1</h3>
+        <label>Mid 1:</label>
+        <input type="number" name="subject1_mid1" required>
+        <label>Mid 2:</label>
+        <input type="number" name="subject1_mid2" required>
+        <label>Mid 3:</label>
+        <input type="number" name="subject1_mid3" required>
+      </div>
+
+      <div class="subject-block">
+        <h3>Subject 2</h3>
+        <label>Mid 1:</label>
+        <input type="number" name="subject2_mid1" required>
+        <label>Mid 2:</label>
+        <input type="number" name="subject2_mid2" required>
+        <label>Mid 3:</label>
+        <input type="number" name="subject2_mid3" required>
+      </div>
+
+      <div class="subject-block">
+        <h3>Subject 3</h3>
+        <label>Mid 1:</label>
+        <input type="number" name="subject3_mid1" required>
+        <label>Mid 2:</label>
+        <input type="number" name="subject3_mid2" required>
+        <label>Mid 3:</label>
+        <input type="number" name="subject3_mid3" required>
+      </div>
+
+      <div class="subject-block">
+        <h3>Subject 4</h3>
+        <label>Mid 1:</label>
+        <input type="number" name="subject4_mid1" required>
+        <label>Mid 2:</label>
+        <input type="number" name="subject4_mid2" required>
+        <label>Mid 3:</label>
+        <input type="number" name="subject4_mid3" required>
+      </div>
+
+      <div class="subject-block">
+        <h3>Subject 5</h3>
+        <label>Mid 1:</label>
+        <input type="number" name="subject5_mid1" required>
+        <label>Mid 2:</label>
+        <input type="number" name="subject5_mid2" required>
+        <label>Mid 3:</label>
+        <input type="number" name="subject5_mid3" required>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>

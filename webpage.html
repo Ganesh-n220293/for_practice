@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Mid Marks Form</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #0f0f1a;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-card {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+      border: 1px solid rgba(0, 255, 255, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #00ffe7;
+      text-shadow: 0 0 8px #00ffe7;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 15px;
+      color: #e0e0e0;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 6px;
+      color: #fff;
+      outline: none;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input[type="submit"] {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #00ffe7, #6e8efb);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px #00ffe7;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(135deg, #00cccc, #4d70ff);
+      box-shadow: 0 0 20px #00ffe7, 0 0 30px #00ffe7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background animation -->
+  <div id="particles-js"></div>
+
+  <div class="form-card">
+    <h2>Midterm Marks Entry</h2>
+    <form action="submit.php" method="post">
+      <label for="name">Student Name:</label>
+      <input type="text" name="name" placeholder="Enter student name" required>
+
+      <label for="id">Roll No (ID):</label>
+      <input type="number" name="id" placeholder="Enter roll number" required>
+
+      <label for="mid1">Mid 1 Marks:</label>
+      <input type="number" name="mid1" placeholder="Enter marks" required>
+
+      <label for="mid2">Mid 2 Marks:</label>
+      <input type="number" name="mid2" placeholder="Enter marks" required>
+
+      <label for="mid3">Mid 3 Marks:</label>
+      <input type="number" name="mid3" placeholder="Enter marks" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <!-- Include particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Initialize particles.js -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ffe7" },
+        "shape": {
+          "type": "triangle",
+          "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00ffe7",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 100, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+</body>
+</html>
